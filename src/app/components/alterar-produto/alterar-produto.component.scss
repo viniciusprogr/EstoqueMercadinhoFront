@@ -1,0 +1,90 @@
+h1 {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+form {
+  width: 30%; /* Ajuste a largura de acordo com a preferência */
+  margin: 2rem auto 10rem auto; /* Centralize horizontalmente em todas as larguras de tela */
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  label {
+    display: block;
+    margin-bottom: 12px;
+    color: #ffffff;
+  }
+
+  input {
+    display: flex;
+    margin-bottom: 12px;
+    color: #000000;
+    width: 100%; /* Preenchimento total do espaço disponível */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .botao-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Espaçamento superior para separar os botões */
+  }
+
+  .botao-alterar {
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    margin: 0 10px; /* Espaçamento lateral entre os botões */
+    background-color: #4CAF50; /* Verde */
+    color: #fff; /* Texto branco */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Transforma o cursor em uma mão ao passar o mouse */
+  }
+
+  .botao-voltar {
+    padding: 10px 20px; /* Espaçamento interno dos botões */
+    margin: 0 10px; /* Espaçamento lateral entre os botões */
+    background-color: #FF0000; /* Vermelho */
+    color: #fff; /* Texto branco */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Transforma o cursor em uma mão ao passar o mouse */
+    width: 90px;
+
+  }
+
+}
+
+.modal {
+  background: #e2dddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #000000;
+  min-width: 550px;
+  position: fixed;
+  left: 50%;
+  padding: 30px;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.modalButton{
+  background-color: #77a578; /* Cor de fundo verde */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px; /* Espaçamento superior para o botão */
+  cursor: pointer;
+  border-radius: 8px;
+}

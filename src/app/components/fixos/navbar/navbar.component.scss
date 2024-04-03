@@ -1,0 +1,25 @@
+$nav-bg-color: #333;
+$nav-link-color: white;
+$nav-link-hover-color: #e0e0e0;
+
+nav {
+  background-color: $nav-bg-color;
+  ul {
+    margin-top: -1px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    li {
+      margin: 20px 20px;
+      a {
+        color: $nav-link-color;
+        text-decoration: none;
+        transition: color 0.3s ease; // Adiciona uma transição suave à cor
+        &:hover {
+          color: $nav-link-hover-color;
+        }
+      }
+    }
+  }
+}

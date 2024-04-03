@@ -1,0 +1,73 @@
+<div *ngIf="!modalVisivel">
+  <h1>Lista de Produtos</h1>
+  <div class="busca">
+    <input (input)="buscarProduto()" [(ngModel)]="termoDePesquisa"  type="text" class="barraPesquisa" placeholder="Nome do Produto">
+  </div>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Nome do Produto</th>
+          <th>Preço</th>
+          <th (click)="buscaProdutoSemEstoque()" class="estoque" >Estoque <i *ngIf="semEstoque" (click)="listarProdutos()" class="bi bi-arrow-left-circle"></i> </th>
+          <th>Gerenciar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let produto of produtos">
+          <td>{{ produto.nome }}</td>
+          <td>R$ {{ produto.preco }}</td>
+          <div class="icon-container">
+            <i
+              (click)="removerQuantidadeEstoque(produto)"
+              class="bi bi-dash-circle"
+            ></i>
+            <td>{{ produto.quantidade }}</td>
+            <i
+              (click)="adicionarQuantidadeEstoque(produto)"
+              class="bi bi-plus-circle"
+            ></i>
+          </div>
+          <td>
+            <div class="icon-container">
+              <i
+                class="bi bi-pencil-square bi-justify"
+                (click)="alterarProduto(produto.id)"
+              ></i>
+              <i
+                class="bi bi-trash-fill bi-justify"
+                (click)="abrirModalExcluir(produto.id)"
+              ></i>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal de Erro -->
+<div *ngIf="modalVisivel" class="modal" id="errorModal">
+  <div>
+    <h2>Opa!</h2>
+    <p>{{ mensagemErro }}</p>
+    <button class="modalButton" (click)="fecharModal()">Ok</button>
+  </div>
+</div>
+
+<div *ngIf="modalExcluirVisivel" class="modal" id="errorModal">
+  <div>
+    <h2>Opa!</h2>
+    <p>{{ mensagemErro }}</p>
+    <button id="modalConfirmou" class="modalButton" (click)="excluirProduto()">
+      Sim
+    </button>
+    <button
+      id="modalNaoConfirmou"
+      class="modalButton modalButtonExcluir"
+      (click)="fecharModalExcluir()"
+    >
+      Não
+    </button>
+  </div>
+</div>

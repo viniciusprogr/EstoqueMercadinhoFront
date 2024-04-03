@@ -1,0 +1,43 @@
+<div *ngIf="!modalVisivel">
+  <h1>Alterar Produto</h1>
+  <form [formGroup]="alteraProdutoForm">
+    <label for="nome">Nome do Produto:</label>
+    <input
+      placeholder="Digite um nome"
+      formControlName="nome"
+      type="text"
+      required
+    /><br />
+
+    <label for="quantidade">Quantidade:</label>
+    <input
+      placeholder="Digite um número"
+      formControlName="quantidade"
+      type="number"
+      required
+    /><br />
+
+    <label for="preco">Preço:</label>
+    <input
+      placeholder="Digite um valor"
+      type="text"
+      formControlName="preco"
+      required
+    />
+
+    <div class="botao-centralizado">
+      <button (click)="alterarProduto()" type="submit" class="botao-alterar">Atualizar</button>
+      <button (click)="voltarParaLista()" class="botao-voltar">Voltar</button>
+    </div>
+
+
+  </form>
+</div>
+<!-- Modal de Erro -->
+<div *ngIf="modalVisivel" class="modal" id="errorModal">
+  <div>
+    <h2>{{ tituloDoModal }}</h2>
+    <p>{{ mensagemDoModal }}</p>
+    <button class="modalButton" (click)="fecharModal()">Ok</button>
+  </div>
+</div>

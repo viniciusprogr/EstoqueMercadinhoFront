@@ -1,0 +1,11 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+$body-font: Arial, sans-serif;
+$primary-bg-color: #f3f0f0;
+
+.corpo {
+  font-family: $body-font;
+  background-color: $primary-bg-color;
+  margin: 0;
+  padding: 0;
+}

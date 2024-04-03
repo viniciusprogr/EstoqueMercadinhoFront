@@ -1,0 +1,106 @@
+h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  margin-top: 30px;
+  background-color: rgb(255, 255, 255);
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  width: 30%;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  margin: 0 auto; /* Centraliza horizontalmente na página */
+  cursor: pointer;
+}
+
+th {
+  background-color: #333;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.bi-justify {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  font-size: 24px; /* Tamanho do ícone */
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.bi-arrow-left-circle {
+  margin-right: -15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.modal {
+  background: #e2dddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #000000;
+  min-width: 550px;
+  position: fixed;
+  left: 50%;
+  padding: 30px;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.modalButton {
+  background-color: #77a578; /* Cor de fundo verde */
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 20px 0px 0px 20px; /* Espaçamento superior para o botão */
+  cursor: pointer;
+  border-radius: 8px;
+}
+.modalButtonExcluir {
+  background-color: #ee1212; /* Cor de fundo vermelho */
+}
+
+.busca {
+  display: block;
+  text-align: center;
+}
+.barraPesquisa {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+
+  padding: 0px 20px;
+  outline: none;
+}
+
+.estoque {
+  cursor: pointer;
+}
